@@ -14,16 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   TextEditingController _searchController = TextEditingController();
   final User? loggedInUser = FirebaseAuth.instance.currentUser;
-  String searchQuery = '';
-  @override
-  void initState() {
-    super.initState();
-    _searchController.addListener(() {
-      setState(() {
-        searchQuery = _searchController.text.trim().toLowerCase();
-      });
-    });
-  }
+
 
   @override
   Widget build(BuildContext context) {
